@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.note {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
