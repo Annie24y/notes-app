@@ -33,3 +33,11 @@ button {
   border-radius: 6px;
   margin-top: 10px;
 }
+.note button {
+  margin-top: 10px;
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
