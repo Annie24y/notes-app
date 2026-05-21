@@ -1,9 +1,26 @@
+let notes = JSON.parse(localStorage.getItem("notes")) || [];
+
+// Render saved notes
+notes.forEach(function (noteText) {
+  createNote(noteText);
+});
+
 function addNote() {
   let input = document.getElementById("noteInput");
   let text = input.value.trim();
 
   if (text === "") return;
 
+  createNote(text);
+
+  notes.push(text);
+
+  saveNotes();
+
+  input.value = "";
+}
+
+function createNote(text) {
   let note = document.createElement("div");
   note.className = "note";
 
@@ -17,12 +34,20 @@ function addNote() {
 
   deleteBtn.onclick = function () {
     note.remove();
+
+    notes = notes.filter(function (noteText) {
+      return noteText !== text;
+    });
+
+    saveNotes();
   };
 
   note.appendChild(content);
   note.appendChild(deleteBtn);
 
   document.getElementById("notesList").appendChild(note);
+}
 
-  input.value = "";
+function saveNotes() {
+  localStorage.setItem("notes", JSON.stringify(notes));
 }
