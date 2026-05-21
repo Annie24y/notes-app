@@ -4,6 +4,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  transition: background 0.3s, color 0.3s;
 }
 
 .container {
@@ -11,6 +12,7 @@ body {
   padding: 20px;
   border-radius: 10px;
   width: 400px;
+  transition: background 0.3s, color 0.3s;
 }
 
 textarea {
@@ -33,6 +35,7 @@ button {
   border-radius: 6px;
   margin-top: 10px;
 }
+
 .note button {
   margin-top: 10px;
   background: crimson;
@@ -40,4 +43,24 @@ button {
   border: none;
   padding: 6px 10px;
   border-radius: 4px;
+}
+
+/* Dark mode */
+.dark-mode {
+  background: #121212;
+}
+
+.dark-mode .container {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark-mode textarea {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark-mode .note {
+  background: #2a2a2a;
 }
